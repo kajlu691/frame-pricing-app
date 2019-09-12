@@ -1,0 +1,62 @@
+/*
+Logo blue color rgb: #0083bd
+bacground darker color: #f4f4f4
+
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 70%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  background-color: #000000;
+  color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+header,
+.container {
+  display: flex;
+  font-size: 2rem;
+}
+
+header { align-self: center; }
+
+.container {
+  width: 1366px;
+  height: auto;
+  justify-content: center;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 1fr;
+  width: 30%;
+  height: 80%;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  margin: 30px;
+  cursor: pointer;
+  transition: transform 0.5s; }
+    .box:hover { transform: scale(1.1); }
+
+
+
