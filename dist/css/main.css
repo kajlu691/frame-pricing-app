@@ -16,47 +16,94 @@ html {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  background-color: #000000;
-  color: #ffffff;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  overflow: hidden;
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-}
-
-header,
-.container {
-  display: flex;
+  font-family: 'Roboto Slab', serif;
   font-size: 2rem;
-}
-
-header { align-self: center; }
-
-.container {
-  width: 1366px;
-  height: auto;
+  background-color: rgb(36, 36, 36);
+  color: #ffffff;
+  display: grid;
   justify-content: center;
 }
 
-.box {
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  margin-top: 100px;
+  width: 40vw;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 20% 1fr;
-  width: 30%;
-  height: 80%;
-  justify-items: center;
+  grid-auto-rows: 1fr;
+}
+
+.wrapper div {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  border: 1px solid #ffffff;
-  border-radius: 3px;
-  margin: 30px;
+}
+
+.wrapper div:nth-child(9),
+.wrapper div:last-child {
+  justify-content: center;
+}
+
+input,
+.select {
+  display: block;
+  font-size: 1.5rem;
+  padding: .6em 1.4em .5em .8em;
+  width: 30%;
+  max-width: 30%;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: .5em;
   cursor: pointer;
-  transition: transform 0.5s; }
-    .box:hover { transform: scale(1.1); }
+  text-align: center;
+}
 
+.select::-ms-expand {
+  display: none;
+}
 
+.select:hover {
+  border-color: #888;
+}
 
+.select:focus,
+input:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222; 
+  outline: none;
+  cursor: default;
+}
+
+input {
+  appearance: none;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:active {
+    transform: scale(0.90);
+}

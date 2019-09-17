@@ -7,28 +7,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./css/main.css">
 
-    <title>Cost calculations</title>
+    <title>Frames</title>
 </head>
 
 <body>
-    <header>
-        <h1>Cost calculation</h1>
-    </header>
     <div class="container">
-        <div class="box frame-box">
-            <h2>Frames</h2>
-            <img src="img/frame-main.jpg" alt="Fame pic">
-        </div>
-        <div class="box manifold-box">
-            <h2>Manifolds</h2>
-            <img src="img/manifold-mian.jpg" alt="Manifold pic">
+        <header>
+            <h1>Frame Pricing App</h1>
+        </header>
+        <div class="wrapper">
+            <div>
+                <label>Frame type</label>
+                <select class="select" id="frame-type">
+                    <option value="o-type">O-type</option>
+                    <option value="h-type">H-type</option>
+                </select>
+            </div>
+            <div>
+                <label>Steel type</label>
+                <select class="select" id="steel-type">
+                    <option value="316">316</option>
+                    <option value="304">304</option>
+                </select>
+            </div>
+            <div>
+                <label>Hose type</label>
+                <select class="select" id="hose-type">
+                    <option value="airprax">Airprax</option>
+                    <option value="oxyprax">Oxyprax</option>
+                </select>
+            </div>
+            <div>
+                <label for="hoses-num">Number of hoses</label>
+                <input type="text" name="number_of_hoses" id="hoses-num">
+            </div>
+            <div>
+                <label for="outer-width">Outer width</label>
+                <input type="text" name="frame_outer-width" id="outer-width">
+            </div>
+            <div>
+                <label for="outer-length">Outer height</label>
+                <input type="text" name="frame_outer_length" id="outer-height">
+            </div>
+            <div>
+                <label for="quantity">Quantity</label>
+                <input type="text" name="frames_quantity" id="quantity">
+            </div>
+            <div>
+                <label for="discount">Discount</label>
+                <input type="text" name="discount" id="discount">
+            </div>
+            <div>
+                <button class="calc-btn">Calculate</button>
+            </div>
+            <div class="total">
+                <h2>TOTAL: 0 ZŁ</h2>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/bundle.js"></script>
 </body>
 
 </html>

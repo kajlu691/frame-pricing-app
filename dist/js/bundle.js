@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _views_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./views/base */ \"./src/js/views/base.js\");\n\n_views_base__WEBPACK_IMPORTED_MODULE_0__[\"elements\"].frameBox.addEventListener('click', function () {\n  document.location.assign(\"\".concat(_views_base__WEBPACK_IMPORTED_MODULE_0__[\"urls\"].baseUrl).concat(_views_base__WEBPACK_IMPORTED_MODULE_0__[\"urls\"].framesUrl));\n});\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _views_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./views/base */ \"./src/js/views/base.js\");\n\n\nif (window.location.href === _views_base__WEBPACK_IMPORTED_MODULE_0__[\"urls\"].baseUrl || window.location.href === _views_base__WEBPACK_IMPORTED_MODULE_0__[\"urls\"].baseUrl2) {\n  _views_base__WEBPACK_IMPORTED_MODULE_0__[\"elements\"].frameBox.addEventListener('click', function () {\n    window.location.assign(\"\".concat(_views_base__WEBPACK_IMPORTED_MODULE_0__[\"urls\"].baseUrl).concat(_views_base__WEBPACK_IMPORTED_MODULE_0__[\"urls\"].framesUrl));\n    console.log('object');\n  });\n}\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
@@ -102,11 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vie
 /*!******************************!*\
   !*** ./src/js/views/base.js ***!
   \******************************/
-/*! exports provided: urls, elements */
+/*! exports provided: prices, urls, elements */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"urls\", function() { return urls; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"elements\", function() { return elements; });\nvar urls = {\n  baseUrl: 'http://localhost:8080/',\n  framesUrl: '/templates/frames-template.html',\n  manifoldsUrl: '/templates/manifolds-template.html'\n};\nvar elements = {\n  frameBox: document.querySelector('.frame-box')\n};\n\n//# sourceURL=webpack:///./src/js/views/base.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"prices\", function() { return prices; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"urls\", function() { return urls; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"elements\", function() { return elements; });\nvar prices = {\n  airprax: 2,\n  oxyprax: 2,\n  katownik304: 2,\n  katownik316: 2,\n  profil304: 2,\n  profil316: 2,\n  plaskownik304: 2,\n  plaskownik316: 2,\n  rurka: 2,\n  nypel: 2,\n  robocizna: 2\n};\nvar urls = {\n  baseUrl: 'http://localhost:8080',\n  baseUrl2: 'http://localhost:8080/index.html',\n  framesUrl: '/templates/frames-template.html',\n  manifoldsUrl: '/templates/manifolds-template.html'\n};\nvar elements = {\n  frameBox: document.querySelector('.frame-box')\n};\n\n//# sourceURL=webpack:///./src/js/views/base.js?");
 
 /***/ })
 

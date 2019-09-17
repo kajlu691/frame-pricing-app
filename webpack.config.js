@@ -15,14 +15,6 @@ module.exports = {
       filename: 'index.html',
       template: './src/index.html',
     }),
-    new HtmlWebpackPlugin({
-      filename: './templates/frames-template.html',
-      template: './src/templates/frames-template.html',
-    }),
-    new HtmlWebpackPlugin({
-      filename: './templates/manifolds-template.html',
-      template: './src/templates/manifolds-template.html',
-    }),
   ],
   module: {
     rules: [
