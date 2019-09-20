@@ -42,7 +42,7 @@ header {
   align-items: center;
 }
 
-.wrapper div:nth-child(9),
+.wrapper div:nth-child(10),
 .wrapper div:last-child {
   justify-content: center;
 }

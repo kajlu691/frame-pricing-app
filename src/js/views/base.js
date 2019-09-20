@@ -1,27 +1,27 @@
 export const hoses = {
-  airprax: 2,
-  oxyprax: 10,
+  airprax: 43,
+  oxyprax: 53,
 };
 
 export const steel304 = {
-  katownik: 2,
-  profil: 2,
-  plaskownik: 2,
-  rurka: 2,
-  walek: 2,
-  nypel: 2,
+  katownik: 19.36,
+  profil: 20.79,
+  plaskownik: 7.16,
+  rurka: 9.24,
+  walek: 12.32,
+  nypel: 3,
 };
 
 export const steel316 = {
-  katownik: 10,
-  profil: 10,
-  plaskownik: 10,
-  rurka: 10,
-  walek: 10,
-  nypel: 10,
+  katownik: 25.4,
+  profil: 38,
+  plaskownik: 10.56,
+  rurka: 12.8,
+  walek: 16.46,
+  nypel: 3,
 };
 
 export const labor = {
-  robociznaBaza: 2,
-  robociznaZaWaz: 2,
+  robociznaBaza: 1,
+  robociznaZaWaz: 1,
 };

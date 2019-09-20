@@ -9,16 +9,25 @@ export default class OFrame {
 
   calcHosesPrice() {
     // Hoses are always 2.5 cm shorter than outer height of frame
-    return (this.hoseType * this.outerHeight - 0.025) * this.numOfHoses;
+    return (this.hoseType * this.outerHeight - 1.08) * this.numOfHoses;
   }
 
   calcAngleIronPrice(angleIron) {
-    return this.outerWidth * angleIron + (this.outerHeight * 2 - 0.05);
+    return (
+      this.outerWidth * angleIron + (this.outerHeight * 2 - 0.05) * angleIron
+    );
   }
 
   // Calculate ss steel profile price and add two 3cm flat bars for each side
   calcProfilePrice(profile, flatBar) {
     return this.outerWidth * profile + flatBar * 0.05;
+  }
+
+  calcAdditionalBar(condition, flatBar) {
+    if (condition) {
+      return this.outerWidth * flatBar;
+    }
+    return 0;
   }
 
   calcTubePrice(tube, roll, nipple) {

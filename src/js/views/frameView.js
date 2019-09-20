@@ -5,11 +5,14 @@ export const inputDataView = {
   hosesNum: document.getElementById('hoses-num').value,
   outerWidth: document.getElementById('outer-width').value,
   outerHeight: document.getElementById('outer-height').value,
+  quantity: document.getElementById('quantity').value,
+  discount: document.getElementById('discount').value,
+  flatBar: document.getElementById('flat-bar').checked,
 };
 
 const totalContainer = document.querySelector('.total');
 
-export const renderTotal = total => {
-  const markup = `<h2>TOTAL: ${total} ZŁ</h2>`;
+export const renderTotal = (total, quantity, discount) => {
+  const markup = `<h2>TOTAL: ${total * quantity * discount} ZŁ</h2>`;
   totalContainer.innerHTML = markup;
 };
