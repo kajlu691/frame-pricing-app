@@ -67,9 +67,56 @@
                 <input type="checkbox" value="add" id="flat-bar">
             </div>
             <div>
-                <button class="calc-btn">Calculate</button>
+                <button class="calc-btn" id="frame-calc-btn">Calculate</button>
             </div>
-            <div class="total">
+            <div class="total" id="frame-total">
+                <h2>TOTAL: 0 ZŁ</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Manifold Pricing App</h1>
+        </header>
+        <div class="wrapper">
+            <div>
+                <label>Steel type</label>
+                <select class="select" id="mani-steel-type">
+                    <option value="316">316</option>
+                    <option value="304">304</option>
+                </select>
+            </div>
+            <div>
+                <label>Hose type</label>
+                <select class="select" id="mani-hose-type">
+                    <option value="airprax">Airprax</option>
+                    <option value="oxyprax">Oxyprax</option>
+                </select>
+            </div>
+            <div>
+                <label for="hoses-num">Number of hoses</label>
+                <input type="text" id="mani-hoses-num" value="0">
+            </div>
+            <div>
+                <label for="hoses-length">Length of hoses</label>
+                <input type="text" id="mani-hoses-length" value="0">
+            </div>
+            <div>
+                <label for="outer-width">Width</label>
+                <input type="text" id="mani-width" value="0">
+            </div>
+            <div>
+                <label for="quantity">Quantity</label>
+                <input type="text" id="mani-quantity" value="0">
+            </div>
+            <div>
+                <label for="discount">Discount</label>
+                <input type="text" id="mani-discount">
+            </div>
+            <div class="mani-btn">
+                <button class="calc-btn" id="mani-calc-btn">Calculate</button>
+            </div>
+            <div class="total" id="mani-total">
                 <h2>TOTAL: 0 ZŁ</h2>
             </div>
         </div>

@@ -10,7 +10,7 @@ export const inputDataView = {
   flatBar: document.getElementById('flat-bar').checked,
 };
 
-const totalContainer = document.querySelector('.total');
+const totalContainer = document.getElementById('frame-total');
 
 export const renderTotal = (total, quantity, discount) => {
   const markup = `<h2>TOTAL: ${total * quantity * discount} ZŁ</h2>`;

@@ -22,6 +22,7 @@ body {
   color: #ffffff;
   display: grid;
   justify-content: center;
+  row-gap: 10rem;
 }
 
 header {
@@ -45,6 +46,10 @@ header {
 .wrapper div:nth-child(10),
 .wrapper div:last-child {
   justify-content: center;
+}
+
+.mani-btn {
+  justify-content: center !important;
 }
 
 input,
