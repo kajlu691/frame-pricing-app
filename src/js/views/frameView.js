@@ -8,11 +8,12 @@ export const inputDataView = {
   quantity: document.getElementById('quantity').value,
   discount: document.getElementById('discount').value,
   flatBar: document.getElementById('flat-bar').checked,
+  btn: document.getElementById('frame-calc-btn'),
 };
 
 const totalContainer = document.getElementById('frame-total');
 
-export const renderTotal = (total, quantity, discount) => {
+export const renderFrameTotal = (total, quantity, discount) => {
   const markup = `<h2>TOTAL: ${total * quantity * discount} ZŁ</h2>`;
   totalContainer.innerHTML = markup;
 };

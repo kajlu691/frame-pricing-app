@@ -11,8 +11,8 @@ export default class Manifold {
     return (
       this.hoseType * this.hoseLength * this.numOfHoses +
       this.hoseLength * rod * this.numOfHoses +
-      plug +
-      band
+      plug * this.numOfHoses +
+      band * this.numOfHoses
     );
   }
 

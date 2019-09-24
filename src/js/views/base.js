@@ -25,3 +25,14 @@ export const labor = {
   robociznaBaza: 1,
   robociznaZaWaz: 1,
 };
+
+export const manifoldLabor = {
+  robociznaBaza: 1,
+  robociznaZaWaz: 1,
+};
+
+export const addings = {
+  zatyczka: 1,
+  opaska: 2,
+  pret: 1.88,
+};
