@@ -113,3 +113,19 @@ button:focus {
 button:active {
     transform: scale(0.90);
 }
+
+@media (max-width: 1150px) {
+  .wrapper {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 910px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .wrapper {
+    width: 90vw;
+  }
+}
