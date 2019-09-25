@@ -10,6 +10,7 @@ export const steel304 = {
   rurka: 9.24,
   walek: 12.32,
   nypel: 3,
+  walek12: 3,
 };
 
 export const steel316 = {
@@ -19,16 +20,22 @@ export const steel316 = {
   rurka: 12.8,
   walek: 16.46,
   nypel: 3,
+  walek12: 3,
 };
 
 export const labor = {
-  robociznaBaza: 1,
-  robociznaZaWaz: 1,
+  robociznaBaza: 50,
+  robociznaZaWaz: 43,
+};
+
+export const HFrameLabor = {
+  robociznaBaza: 40,
+  robociznaZaWaz: 43,
 };
 
 export const manifoldLabor = {
-  robociznaBaza: 1,
-  robociznaZaWaz: 1,
+  robociznaBaza: 30,
+  robociznaZaWaz: 43,
 };
 
 export const addings = {

@@ -1,4 +1,5 @@
 import OFrame from './models/OFrame';
+import HFrame from './models/HFrame';
 import Manifold from './models/Manifold';
 import {
   hoses,
@@ -7,6 +8,7 @@ import {
   labor,
   addings,
   manifoldLabor,
+  HFrameLabor,
 } from './views/base';
 import { inputDataView, renderFrameTotal } from './views/frameView';
 import { maniInputDataView, renderManiTotal } from './views/manifoldView';
@@ -84,6 +86,74 @@ import { maniInputDataView, renderManiTotal } from './views/manifoldView';
     return Math.ceil(total);
   };
 
+  /**
+   * HFrame price calculator controller
+   * Calculates the price of one frame
+   */
+
+  const calcHFramePrice = () => {
+    const inputData = {
+      numOfHoses: inputDataView.hosesNum,
+      outerWidth: inputDataView.outerWidth.replace(',', '.'),
+      outerHeight: inputDataView.outerHeight.replace(',', '.'),
+    };
+
+    // Choose the right price of given hose type
+    const hosesArr = Object.values(hoses);
+
+    let hose;
+    if (inputDataView.hoseType === 'airprax') {
+      hose = 0;
+    } else {
+      hose = 1;
+    }
+
+    let steel;
+    if (inputDataView.steelType === '304') {
+      steel = steel304;
+    } else {
+      steel = steel316;
+    }
+
+    // Create new frame
+    const frame = new HFrame(
+      hosesArr[hose],
+      parseInt(inputData.numOfHoses),
+      parseFloat(inputData.outerWidth),
+      parseFloat(inputData.outerHeight)
+    );
+
+    // Calculate hose price
+    const hosePrice = frame.calcHosesPrice();
+    // Calculate iron angle price
+    const ironAnglePrice = frame.calcAngleIronPrice(steel.katownik);
+    // Calculate profile and flat bar price
+    const profilePrice = frame.calcProfilePrice(steel.profil, steel.plaskownik);
+    // Calculate tube, roll and nipple price
+    const tubePrice = frame.calcTubePrice(
+      steel.rurka,
+      steel.walek,
+      steel.nypel
+    );
+    // Calculate labor price
+    const laborPrice = frame.calcLaborPrice(
+      HFrameLabor.robociznaBaza,
+      HFrameLabor.robociznaZaWaz
+    );
+
+    // Calculate mid roll price
+    const midRoll = frame.calcMidRoll(steel.walek12);
+
+    const total =
+      hosePrice +
+      ironAnglePrice +
+      profilePrice +
+      tubePrice +
+      laborPrice +
+      midRoll;
+    return Math.ceil(total);
+  };
+
   // Calculate the discount
   const discount = () => {
     const input = inputDataView.discount;
@@ -91,8 +161,16 @@ import { maniInputDataView, renderManiTotal } from './views/manifoldView';
     return discountInFraction;
   };
 
+  // Check which type is selected and save it to virable
+  let selectedType;
+  if (inputDataView.frameType === 'o-type') {
+    selectedType = calcOFramePrice();
+  } else {
+    selectedType = calcHFramePrice();
+  }
+
   window.onload = renderFrameTotal(
-    calcOFramePrice(),
+    selectedType,
     inputDataView.quantity,
     discount()
   );
